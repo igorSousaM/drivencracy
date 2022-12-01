@@ -10,13 +10,7 @@ await mongoClient.connect();
 db = mongoClient.db("drivencracy");
 
 const pollsCollection = db.collection("poll");
+const voteCollection = db.collection("vote");
+const choiceCollection = db.collection("choice");
 
-// try {
-//   await mongoClient.connect();
-//   db = mongoClient.db("drivencracy");
-//   pollsCollecion = db.collection("poll");
-// } catch (err) {
-//   console.log(err);
-// }
-
-export {pollsCollection};
+export { pollsCollection, voteCollection, choiceCollection };
