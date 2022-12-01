@@ -1,4 +1,5 @@
 import { pollSchema } from "../models/poll.model.js"
+import dayjs from "dayjs"
 
 export function validatePostPoll(req, res, next) {
 
@@ -12,7 +13,7 @@ export function validatePostPoll(req, res, next) {
     }
 
     if(body.expireAt === undefined){
-        body.expireAt = Date().split(" ").slice(1,5).join(" ")
+        body.expireAt = dayjs().add(30, "day").format("YYYY-MM-DD HH:MM")
     }
 
     res.locals.body = body
