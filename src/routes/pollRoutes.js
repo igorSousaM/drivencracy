@@ -1,6 +1,6 @@
 import express from "express";
 import { getPoll, postPoll } from "../controllers/poll.controller.js";
-import { validatePostPoll } from "../middleware/poll.middleware.js";
+import { validatePostPoll } from "../middleware/pollValidation.middleware.js";
 
 const pollRouter = express.Router();
 

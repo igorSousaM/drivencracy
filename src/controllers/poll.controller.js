@@ -3,8 +3,8 @@ import { pollsCollection } from "../database/index.js";
 
 export async function getPoll(req, res) {
   try {
-    let lista = await pollsCollection.find().toArray();
-    res.status(200).send(lista)
+    let pollList = await pollsCollection.find().toArray();
+    res.status(200).send(pollList)
 } catch (err) {
     console.log(err);
     res.sendStatus(500);
