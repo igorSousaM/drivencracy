@@ -6,6 +6,6 @@ export const pollSchema = joi.object({
     .string()
     .pattern(
       new RegExp("^[0-9]{4}[-][0-9]{2}[-][0-9]{2}[ ][0-9]{2}[:][0-9]{2}$")
-    ),
+    )
 });
 
